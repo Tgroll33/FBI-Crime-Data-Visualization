@@ -1,0 +1,6 @@
+import matplotlib.pyplot as plt
+
+violentcrimesdata = open("violent_crime_data.txt")
+crimeslist = violentcrimesdata.readlines()
+
+print(crimeslist)
