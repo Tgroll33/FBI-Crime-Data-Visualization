@@ -1,6 +1,17 @@
+from matplotlib.patches import Polygon
 import matplotlib.pyplot as plt
 
 violentcrimesdata = open("violent_crime_data.txt")
 crimeslist = violentcrimesdata.readlines()
 
-print(crimeslist)
+dates = range(2000,2020)
+datetick = []
+for i in dates:
+    if i%2 == 0 :
+        datetick.append(i)
+
+plt.figure(figsize=(10,10))
+plt.plot(dates,crimeslist,'bo--')
+plt.title("Violent Crimes 2000-2019")
+plt.xticks(datetick)
+plt.show()
